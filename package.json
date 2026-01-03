@@ -1,0 +1,51 @@
+{
+  "name": "amara",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typegen": "sanity schema extract --path=src/sanity/extract.json && sanity typegen generate && rm ./src/sanity/extract.json",
+    "check:deploy": "node scripts/check-deployment.js",
+    "check:env": "node scripts/validate-env.js",
+    "check:build": "bash scripts/verify-build.sh",
+    "check:types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.1.1",
+    "@heroicons/react": "^2.1.4",
+    "@sanity/client": "^7.12.1",
+    "@sanity/icons": "^3.7.4",
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.52.2",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.12",
+    "feed": "^4.2.2",
+    "framer-motion": "^11.2.10",
+    "next": "14.2.11",
+    "next-sanity": "^9.4.7",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-use-measure": "^2.1.1",
+    "sanity": "^3.55.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "@supabase/ssr": "^0.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.7",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.11",
+    "postcss": "^8.4.40",
+    "prettier": "^3.3.2",
+    "prettier-plugin-organize-imports": "^4.0.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.1.7",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@10.18.1+sha512.77a884a165cbba2d8d1c19e3b4880eee6d2fcabd0d879121e282196b80042351d5eb3ca0935fa599da1dc51265cc68816ad2bddd2a2de5ea9fdf92adbec7cd34"
+}
